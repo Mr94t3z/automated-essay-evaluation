@@ -6,7 +6,7 @@ from lib.predict import calculate_score
 sys.path.insert(1, os.path.abspath(os.path.join(os.getcwd())))
 
 app = Flask(__name__)
-app.config["SECRET_KEY"] = 'rifaldo sukma s.'
+app.config["SECRET_KEY"] = 'sc-mr94t3z'
 
 
 @app.route("/", methods=["POST", "GET"])

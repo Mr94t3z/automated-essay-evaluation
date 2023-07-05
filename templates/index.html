@@ -14,7 +14,7 @@
             var counter = 1;
 
             $("#add-answer-btn").click(function() {
-                var label = '<div class="mb-3"><label for="jawaban_siswa_' + counter + '" class="form-label">Jawaban Siswa ' + counter + '</label>';
+                var label = '<div class="mb-3"><label for="jawaban_siswa_' + counter + '" class="form-label">Student\'s Answer ' + counter + '</label>';
                 var inputField = '<input type="text" name="jawaban_siswa" id="jawaban_siswa_' + counter + '" class="form-control" required></div>';
                 var answerField = '<div class="answer-field">' + label + inputField + '</div>';
                 $("#answer-fields").append(answerField);
@@ -65,7 +65,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="kunci_jawaban" class="form-label">Kunci Jawaban</label>
+                        <label for="kunci_jawaban" class="form-label">Answer Key</label>
                         <input type="text" rows="3" class="form-control" name="kunci_jawaban" id="kunci_jawaban" required>
                     </div>
 
