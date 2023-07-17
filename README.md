@@ -129,3 +129,12 @@ If there are `no errors`, `restart Nginx` to apply the changes:
 ```
 sudo systemctl restart nginx
 ```
+
+# Swap 4GB RAM on AWS Free Tier
+
+```
+sudo /bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=4096
+sudo /sbin/mkswap /var/swap.1
+sudo chmod 600 /var/swap.1
+sudo /sbin/swapon /var/swap.1
+```
