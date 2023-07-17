@@ -47,15 +47,15 @@ In the `automatedessay.service` editor, paste the following content into the fil
 
 ```
 [Unit]
-Description=Flask application for esaiotomatis
+Description=Flask application for automatedessay
 After=network.target
 
 [Service]
 User=ubuntu
 Group=www-data
-WorkingDirectory=/home/ubuntu/esaiotomatis
+WorkingDirectory=/home/ubuntu/automatedessay
 Environment="FLASK_APP=app.py"
-ExecStart=/home/ubuntu/esaiotomatis/venv/bin/python -m flask run --host=0.0.0.0 --port=8000
+ExecStart=/home/ubuntu/automatedessay/venv/bin/python -m flask run --host=0.0.0.0 --port=8000
 Restart=always
 
 [Install]
@@ -67,19 +67,19 @@ Save the file by pressing `Ctrl + X`, then `Y`, and finally `Enter`.
 `Enable the service` to start on boot by running the following command:
 
 ```
-sudo systemctl enable esaiotomatis
+sudo systemctl enable automatedessay
 ```
 
 `Start the service` by running the following command:
 
 ```
-sudo systemctl start esaiotomatis
+sudo systemctl start automatedessay
 ```
 
 `Check the service` is running without any errors by running the following command:
 
 ```
-sudo systemctl status esaiotomatis
+sudo systemctl status automatedessay
 ```
 
 Install `Nginx` if it's not already installed. 
@@ -92,7 +92,7 @@ sudo apt install nginx
 Create an `Nginx` server block configuration file for your Flask application. Open a new configuration file using a text editor. 
 
 ```
-sudo nano /etc/nginx/sites-available/esaiotomatis
+sudo nano /etc/nginx/sites-available/automatedessay
 ```
 
 In the configuration file, paste the following configuration, replacing `your_server_ip`` with server's public IP address:
@@ -115,7 +115,7 @@ Save the configuration file by pressing `Ctrl + X`, then `Y`, and finally `Enter
 Enable the server block by creating a symbolic link to the `sites-enabled `directory:
 
 ```
-sudo ln -s /etc/nginx/sites-available/esaiotomatis /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/automatedessay /etc/nginx/sites-enabled/
 ```
 
 `Test the Nginx` configuration for any syntax errors:
