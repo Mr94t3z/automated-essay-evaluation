@@ -95,7 +95,7 @@ Create an `Nginx` server block configuration file for your Flask application. Op
 sudo nano /etc/nginx/sites-available/automatedessay
 ```
 
-In the configuration file, paste the following configuration, replacing `your_server_ip`` with server's public IP address:
+In the configuration file, paste the following configuration, replacing `your_server_ip` with server's public IP address:
 
 ```
 server {
